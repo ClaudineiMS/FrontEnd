@@ -1,0 +1,62 @@
+.custom-button {
+    background-color: transparent;
+    border: transparent; 
+    cursor: pointer; 
+}
+
+/* Efeito de hover */
+.custom-button:hover {
+    border: 2px solid #000000; 
+    border-radius: 10px; 
+    background-color: transparent;
+}
+
+/* Estilo moderno para o botão de envio */
+.submit-button {
+    margin-top: 2%;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: white;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+/* Leve deslocamento para cima ao passar o mouse */
+.submit-button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Leve deslocamento para baixo ao clicar */
+.submit-button:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.side-bar-button{
+    margin-top: 2%;
+    padding: 10px 20px; 
+    font-size: 15px; 
+    font-weight: bold; 
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+  
+/* Leve deslocamento para cima ao passar o mouse */
+.side-bar-button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Leve deslocamento para baixo ao clicar */
+.side-bar-button:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  height: 20dvh;
+  position: relative;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  width: 6%;
+  height: auto;
+  margin-left:75%;
+  margin-top: 1%;
+}
+
+header {
+  display: flex;
+  align-items: center; 
+}
+
+body {
+  background: #003973;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  margin: 0; /* Remove margem padrão */
+}
+
+
+.form {
+  position: absolute; 
+  max-width: 400px; 
+  padding: 15px;
+  background-color: white; 
+  border: 1px solid #ccc; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; 
+  transform: translateX(-50%);
+  left: 50%; 
+
+}
+
+input[type="text"] {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  font-size: 16px; 
+  box-sizing: border-box; 
+}
+
+input[type="text"]:focus {
+  border-color: #5b9bd5; 
+  outline: none; 
+  box-shadow: 0 0 5px rgba(91, 155, 213, 0.5); 
+}
+
