@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import logo from '../ui/themes/giphy.gif';
 import { SearchButton } from '../ui/components/Button';
 import '../ui/styles/App.css';
-import Sidebar from '../ui/components/Sidebar';
+// import Sidebar from '../ui/components/Sidebar';
 import { handleSubmit } from '../data/getData'; 
 import Card from '../ui/components/Card';
 
@@ -13,7 +13,7 @@ function App() {
   
   return (
     <div className="App">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <header>
         <img src={logo} className="App-logo" alt="logo" />
       </header>
@@ -22,7 +22,7 @@ function App() {
         <form className="form" ref={formRef} onSubmit={(event) => handleSubmit(event, formRef, setData)}>
           <h3>Qual o seu consumo mensal de energia ?</h3>
           <input type="text" id="valor" name="valor" required />
-          <SearchButton val={"Enviar"} typeButton={"submit"} styleType={'submit-button'} />
+          <SearchButton val={"Enviar"}  styleType={'submit-button'} />
         </form>
         <Card data={data} /> 
       </div>
