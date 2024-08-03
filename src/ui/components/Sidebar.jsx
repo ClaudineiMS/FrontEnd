@@ -10,7 +10,7 @@ const Sidebar = () => {
   };
 
   const handleCadastrarFornecedor = () => {
-    window.location.href = 'https://django-backend-theta.vercel.app/fornecedores/'; // URL para criar um novo fornecedor
+    window.location.href = 'https://django-backend-amber.vercel.app/fornecedores/'; // URL para criar um novo fornecedor
   };
 
   return (
