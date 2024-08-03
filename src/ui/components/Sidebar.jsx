@@ -10,7 +10,7 @@ const Sidebar = () => {
   };
 
   const handleCadastrarFornecedor = () => {
-    window.location.href = 'http://127.0.0.1:8000/api/fornecedores/criar/'; // URL para criar um novo fornecedor
+    window.location.href = 'https://django-backend-mocha.vercel.app/fornecedores/'; // URL para criar um novo fornecedor
   };
 
   return (
@@ -21,7 +21,7 @@ const Sidebar = () => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <ul>
           <SearchButton
-            val={"Cadastrar fornecedor"}
+            val={"Ver forneceodres"}
             typeButton={"button"} 
             styleType={'side-bar-button'}
             onClick={handleCadastrarFornecedor} 

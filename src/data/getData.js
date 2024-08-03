@@ -13,8 +13,7 @@ export const handleSubmit = async (event, formRef, setData) => {
   if (isNumber(consumo)) {
     try {
       // Faz a requisição para a API com o valor numérico
-      //const response = await fetch(`http://127.0.0.1:5000/api/fornecedores/consumo/${consumo}/`);
-      const response = await fetch(`https://back-end-node-liard.vercel.app/`);
+      const response = await fetch(`https://django-backend-mocha.vercel.app/fornecedores/consumo/${consumo}/`);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -22,10 +21,8 @@ export const handleSubmit = async (event, formRef, setData) => {
 
       // Converte a resposta em JSON
       const data = await response.json();
-      
-      const filteredData = data.filter(item => consumo >= item.limite_mínimo);
 
-      setData(filteredData);
+      setData(data);
 
     } catch (error) {
       console.error('Erro ao buscar os dados!:', error);

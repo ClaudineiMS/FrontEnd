@@ -11,5 +11,6 @@ export const SearchButton = ({ onClick, val, typeButton, styleType}) => {
 }
 
 SearchButton.propTypes = {
-    onClick: PropTypes.func.isRequired
-};
+    val: PropTypes.string.isRequired,
+    styleType: PropTypes.string,
+  };
