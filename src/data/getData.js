@@ -13,7 +13,7 @@ export const handleSubmit = async (event, formRef, setData) => {
   if (isNumber(consumo)) {
     try {
       // Faz a requisição para a API com o valor numérico
-      const response = await fetch(`https://django-backend-amber.vercel.app/fornecedores/consumo/${consumo}/`, {
+      const response = await fetch(`http://localhost:8000/fornecedores/consumo/${consumo}/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
