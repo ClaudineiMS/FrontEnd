@@ -10,7 +10,7 @@ const Sidebar = () => {
   };
 
   const handleCadastrarFornecedor = () => {
-    window.location.href = 'http://localhost:8000/fornecedores/'; 
+    window.location.href = 'https://django-backend-amber.vercel.app/fornecedores/'; 
   };
 
   return (
