@@ -13,8 +13,13 @@ export const handleSubmit = async (event, formRef, setData) => {
   if (isNumber(consumo)) {
     try {
       // Faz a requisição para a API com o valor numérico
-      const response = await fetch(`https://django-backend-mocha.vercel.app/fornecedores/consumo/${consumo}/`);
-
+      const response = await fetch(`https://django-backend-mocha.vercel.app/fornecedores/consumo/${consumo}/`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+      });
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
