@@ -1,4 +1,4 @@
-## Branchs
+## Branches
 
 A branch **main** está configurada para funcionar no **Vercel**.
 
@@ -34,9 +34,22 @@ npm test
 
 Testes implementados: 
 
+Teste 1: Teste para criar o card ( ok )
+
+Teste 2: Testa se o componente não exibe nada quando os dados são null ( ok )
+
+Teste 3: Testa se o componente não exibe o nome do fornecedor quando a propriedade nome está ausente ( ok )
+
+Teste 4: Espera que o texto "Nome não disponível" esteja presente quando o nome não é fornecido ( Fail )
+
+A correção para que o teste 4 não falhe está comentada no arquivo Card.jsx
 
 
+## Como dockerizar a aplicação
 
+```bash
+docker-compose build
+docker-compose up
+```
 
-
-
+A aplicação está disponivel na porta 3000
