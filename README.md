@@ -8,7 +8,6 @@ Endpoint:
 
 https://front-end-dusky-iota.vercel.app/
 
-
 ## Versão do node utilizada
 
 18.17.0
