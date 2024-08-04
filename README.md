@@ -1,4 +1,4 @@
-## Branchs
+## Branches
 
 A branch **main** está configurada para funcionar no **Vercel**.
 
@@ -43,6 +43,7 @@ Teste 3: Testa se o componente não exibe o nome do fornecedor quando a propried
 Teste 4: Espera que o texto "Nome não disponível" esteja presente quando o nome não é fornecido ( Fail )
 
 A correção para que o teste 4 não falhe está comentada no arquivo Card.jsx
+
 
 ## Como dockerizar a aplicação
 
