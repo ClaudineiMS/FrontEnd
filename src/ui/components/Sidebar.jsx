@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/SidebarStyle.css';
-import { SearchButton } from '../components/Button';
+import { Button } from '../components/Button';
+import getAllFornecedores from '../../data/getAllFornecedores';
 
-const Sidebar = () => {
+const Sidebar = ({setData}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -10,8 +11,16 @@ const Sidebar = () => {
   };
 
   const handleCadastrarFornecedor = () => {
-    window.location.href = 'https://django-backend-amber.vercel.app/fornecedores/'; 
+    getAllFornecedores().then(data => {
+      setData(data);
+    }).catch(error => {
+      console.error('Erro ao buscar os fornecedores:', error);
+    });
   };
+
+  const handleClean = () => {
+    setData(null);
+  }
 
   return (
     <div>
@@ -20,11 +29,17 @@ const Sidebar = () => {
       </button>
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <ul>
-          <SearchButton
+          <Button
             val={"Ver forneceodres"}
             typeButton={"button"} 
             styleType={'side-bar-button'}
             onClick={handleCadastrarFornecedor} 
+          /> 
+          <Button
+            val={"Limpar fornecedores"}
+            typeButton={"button"} 
+            styleType={'side-bar-button'}
+            onClick={handleClean} 
           /> 
         </ul>
       </div>
