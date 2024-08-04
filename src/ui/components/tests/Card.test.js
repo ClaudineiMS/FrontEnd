@@ -26,27 +26,27 @@ const mockDataMissingName = [
 ];
 
 describe('Card Component', () => {
-  //Teste para criar o card
-  test('Tenta criar um card', () => {
+  //Teste 1: Teste para criar o card
+  test('Teste 1: Tenta criar um card', () => {
     render(<Card data={mockData} />);
     expect(screen.queryByText('Nenhum fornecedor encontrado.')).toBeNull();
   });
 
-  // Testa se o componente não exibe nada quando os dados são null
-  test('Componente não exibe nada quando os dados são null', () => {
+  //Teste 2: Testa se o componente não exibe nada quando os dados são null
+  test('Teste 2: Componente não exibe nada quando os dados são null', () => {
     render(<Card data={null} />);
     expect(screen.queryByText('Nenhum fornecedor encontrado.')).toBeNull();
   });
 
-  // Testa se o componente não exibe o nome do fornecedor quando a propriedade nome está ausente
-  test('Componente não exibe o nome do fornecedor quando a propriedade nome está ausente', () => {
+  //Teste 3: Testa se o componente não exibe o nome do fornecedor quando a propriedade nome está ausente
+  test('Teste 3: Componente não exibe o nome do fornecedor quando a propriedade nome está ausente', () => {
     const mockDataWithoutName = [{ logo: 'logo.png', limite_mínimo: 100, numero_total_de_clientes: 10, custo: 50, avaliação_média_dos_clientes: 4.5 }];
     render(<Card data={mockDataWithoutName} />);
     expect(screen.queryByText('Fornecedor 1')).toBeNull(); 
   });
 
-// Espera que o texto "Nome não disponível" esteja presente quando o nome não é fornecido
-  test('Deve exibir "Nome não disponível" quando o nome do fornecedor não é fornecido', () => {
+//Teste 4: Espera que o texto "Nome não disponível" esteja presente quando o nome não é fornecido
+  test('Teste 4: Deve exibir "Nome não disponível" quando o nome do fornecedor não é fornecido', () => {
     render(<Card data={mockDataMissingName} />);
     expect(screen.queryByText('Nome não disponível')).not.toBeNull();
   });
