@@ -21,3 +21,18 @@ Clone o repositório e execute na pasta do projeto:
 npm install
 ```
 
+## Testes automatizados com Jest
+
+clone a branch teste_automatizado_front
+
+```bash
+git clone -b teste_automatizado_front https://github.com/ClaudineiMS/FrontEnd.git
+cd FrontEnd
+npm install
+npm test
+```
+
+
+
+
+
