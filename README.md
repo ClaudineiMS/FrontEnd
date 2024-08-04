@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+## Branchs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A branch **main** está configurada para funcionar no **Vercel**.
 
-## Available Scripts
+A branch **teste_automatizado_front** está configurada com os testes automatizados com o Jest e com os arquivos para a dockerização.
 
-In the project directory, you can run:
+Endpoint:
 
-### `npm start`
+https://front-end-dusky-iota.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Versão do node utilizada
 
-### `npm test`
+18.17.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Para executar o projeto
 
-### `npm run build`
+Clone o repositório e execute na pasta do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testes automatizados com Jest
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+clone a branch teste_automatizado_front
 
-### `npm run eject`
+```bash
+git clone -b teste_automatizado_front https://github.com/ClaudineiMS/FrontEnd.git
+cd FrontEnd
+npm install
+npm test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Testes implementados: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Teste 1: Teste para criar o card ( ok )
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Teste 2: Testa se o componente não exibe nada quando os dados são null ( ok )
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Teste 3: Testa se o componente não exibe o nome do fornecedor quando a propriedade nome está ausente ( ok )
 
-## Learn More
+Teste 4: Espera que o texto "Nome não disponível" esteja presente quando o nome não é fornecido ( Fail )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A correção para que o teste 4 não falhe está comentada no arquivo Card.jsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como dockerizar a aplicação
 
-### Code Splitting
+```bash
+docker-compose build
+docker-compose up
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A aplicação está disponivel na porta 3000
