@@ -1,6 +1,6 @@
 const getAllFornecedores = async () => {
     try {
-      const response = await fetch('https://django-backend-amber.vercel.app/fornecedores', {
+      const response = await fetch('https://back-end-nine-peach.vercel.app/fornecedores', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
