@@ -1,4 +1,15 @@
-# Versão do node utilizada
+## Branchs
+
+A branch **main** está configurada para funcionar no **Vercel**.
+
+A branch **teste_automatizado_front** está configurada com os testes automatizados com o Jest.
+
+Endpoint:
+
+https://front-end-dusky-iota.vercel.app/
+
+
+## Versão do node utilizada
 
 18.17.0
 
