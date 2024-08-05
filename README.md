@@ -43,6 +43,8 @@ Teste 4: Espera que o texto "Nome não disponível" esteja presente quando o nom
 
 A correção para que o teste 4 não falhe está comentada no arquivo Card.jsx
 
+![Resultados](Testes.png)
+
 
 ## Como dockerizar a aplicação
 
