@@ -11,10 +11,10 @@ const Card = ({ data }) => {
             {/*Correção para o caso de teste 4 quando ele falhar */}
             {/* <h4>{fornecedor.nome ? fornecedor.nome : 'Nome não disponível'}</h4> */}
             <h4>{fornecedor.nome}</h4>
-            <p><strong>Limite Mínimo:</strong> {fornecedor.limite_mínimo} kWh</p>
-            <p><strong>Clientes:</strong> {fornecedor.numero_total_de_clientes}</p>
+            <p><strong>Limite Mínimo:</strong> {fornecedor.limiteMinimo} kWh</p>
+            <p><strong>Clientes:</strong> {fornecedor.numeroTotalDeClientes}</p>
             <p><strong>Custo:</strong> {fornecedor.custo}</p>
-            <p><strong>Avaliação:</strong> {fornecedor.avaliação_média_dos_clientes}</p>
+            <p><strong>Avaliação:</strong> {fornecedor.avaliacaoMediaDosClientes}</p>
           </div>
         ))
       ) : (

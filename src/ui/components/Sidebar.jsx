@@ -1,26 +1,39 @@
 import React, { useState } from 'react';
 import '../styles/SidebarStyle.css';
 import { Button } from '../components/Button';
-import getAllFornecedores from '../../data/ getAllFornecedores';
+import { useQuery } from '@apollo/client';
+import { GET_ALL_FORNECEDORES } from '../../data/query';
 
-const Sidebar = ({setData}) => {
+const Sidebar = ({ setTodosFornecedores, setConsumo, formRef }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [fetchData, setFetchData] = useState(false); 
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
+  const { data } = useQuery(GET_ALL_FORNECEDORES, {
+    skip: !fetchData, // Só execute a consulta se fetchData for true
+  });
+
   const handleCadastrarFornecedor = () => {
-    getAllFornecedores().then(data => {
-      setData(data);
-    }).catch(error => {
-      console.error('Erro ao buscar os fornecedores:', error);
-    });
+    setFetchData(true); // Define fetchData como true para executar a consulta
   };
 
   const handleClean = () => {
-    setData(null);
-  }
+    setTodosFornecedores(null);
+    setFetchData(false); 
+    setConsumo(null);
+    if (formRef.current) {
+      formRef.current.reset(); // Reseta o formulário, limpando os campos
+    }
+  };
+
+  React.useEffect(() => {
+    if (data) {
+      setTodosFornecedores(data.fornecedores);
+    }
+  }, [data, setTodosFornecedores]);
 
   return (
     <div>
@@ -30,17 +43,17 @@ const Sidebar = ({setData}) => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <ul>
           <Button
-            val={"Ver forneceodres"}
-            typeButton={"button"} 
+            val={"Ver fornecedores"}
+            typeButton={"button"}
             styleType={'side-bar-button'}
-            onClick={handleCadastrarFornecedor} 
-          /> 
+            onClick={handleCadastrarFornecedor}
+          />
           <Button
             val={"Limpar fornecedores"}
-            typeButton={"button"} 
+            typeButton={"button"}
             styleType={'side-bar-button'}
-            onClick={handleClean} 
-          /> 
+            onClick={handleClean}
+          />
         </ul>
       </div>
     </div>
