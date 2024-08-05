@@ -15,6 +15,7 @@ const Card = ({ data }) => {
             <p><strong>Clientes:</strong> {fornecedor.numeroTotalDeClientes}</p>
             <p><strong>Custo:</strong> {fornecedor.custo}</p>
             <p><strong>Avaliação:</strong> {fornecedor.avaliacaoMediaDosClientes}</p>
+            <p><strong>UF:</strong> {fornecedor.estadoDeOrigem} </p>
           </div>
         ))
       ) : (

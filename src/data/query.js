@@ -9,6 +9,7 @@ export const GET_ALL_FORNECEDORES = gql`
         logo
         nome
         numeroTotalDeClientes
+        estadoDeOrigem
     }
 }
 `;
@@ -22,6 +23,7 @@ export const GET_FORNECEDORES_BY_CONSUMO = gql`
       logo
       nome
       numeroTotalDeClientes
+      estadoDeOrigem
     }
   }
 `;
