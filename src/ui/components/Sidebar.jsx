@@ -3,7 +3,7 @@ import '../styles/SidebarStyle.css';
 import { Button } from '../components/Button';
 import getAllFornecedores from '../../data/getAllFornecedores';
 
-const Sidebar = ({setData}) => {
+const Sidebar = ({setData,formRef}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -11,6 +11,9 @@ const Sidebar = ({setData}) => {
   };
 
   const handleCadastrarFornecedor = () => {
+    if (formRef.current) {
+      formRef.current.reset(); 
+    }
     getAllFornecedores().then(data => {
       setData(data);
     }).catch(error => {
@@ -20,6 +23,9 @@ const Sidebar = ({setData}) => {
 
   const handleClean = () => {
     setData(null);
+    if (formRef.current) {
+      formRef.current.reset(); // Reseta o formulário, limpando os campos
+    }
   }
 
   return (

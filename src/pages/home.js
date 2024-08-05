@@ -13,7 +13,7 @@ function App() {
   
   return (
     <div className="App">
-      <Sidebar setData={setData}/>
+      <Sidebar setData={setData} formRef={formRef}/>
       <header>
         <img src={logo} className="App-logo" alt="logo" />
       </header>
