@@ -2,7 +2,8 @@
 
 A branch **main** está configurada para funcionar no **Vercel**.
 
-A branch **teste_automatizado_front** está configurada com os testes automatizados com o Jest e com os arquivos para a dockerização.
+A branch **teste_automatizado_front** está configurada com os testes automatizados com o Jest e com os arquivos para a dockerização. Além disso também 
+esta usando o Graphql.
 
 Endpoint:
 
