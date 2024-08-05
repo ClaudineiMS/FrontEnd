@@ -13,6 +13,7 @@ const Card = ({ data }) => {
             <p><strong>Clientes:</strong> {fornecedor.numero_total_de_clientes}</p>
             <p><strong>Custo:</strong> {fornecedor.custo}</p>
             <p><strong>Avaliação:</strong> {fornecedor.avaliação_média_dos_clientes}</p>
+            <p><strong>UF:</strong> {fornecedor.estado_de_origem} </p>
           </div>
         ))
       ) : (
